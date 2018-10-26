@@ -1,0 +1,31 @@
+<div class="padding-search-bar">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <mat-form-field class="search-full-width">
+        <input matInput placeholder="Search movies" type="search" (keyup)="onSearch($event)" [(ngModel)]="searchText">
+      </mat-form-field>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  </div>
+  <div class="container space">
+    <mat-paginator [length]="totalResults"
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+    <div class="columns is-mobile is-multiline is-centered">
+      <div class="column is-narrow" *ngFor="let item of items">
+        <mat-card  class="example-card card">
+          <mat-card-header>
+            <mat-card-title>{{item.Title}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="item.Poster" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            {{item.Year}}
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-raised-button href="{{item.url}}" color="primary">More</a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
