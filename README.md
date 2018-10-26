@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
+[Live demo](https://angular-pwa-devfest.firebaseapp.com/)
+
+![](https://res.cloudinary.com/dqycg4wf1/image/upload/v1540532836/pwa-angular_h1rzuh.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
